@@ -1,26 +1,56 @@
 function draw() {
+
     const canvas = document.getElementById("canvas");
+
     if (canvas.getContext) {
-      const ctx = canvas.getContext("2d");
-  
-      //Dibujar un rectangulo
-      /*ctx.fillStyle = "green";
-      ctx.fillRect(25, 25, 100, 100);
-      ctx.clearRect(45, 45, 60, 60);
-      ctx.strokeRect(50, 50, 50, 50);*/
 
-      //Dibujar el triangulo
-      ctx.fillStyle = "blue";
-      ctx.beginPath();
-      ctx.moveTo(75, 50);
-      ctx.lineTo(100, 75);
-      ctx.lineTo(100, 25);
-      ctx.fill();
+        const ctx = canvas.getContext("2d");
 
-      //dibujar la carita feliz
-      /*ctx.beginPath();
-      ctx.arc(75, 75, 50, 0, Math.PI * 2, true);*/
+        /*// Dibujar un rectángulo
+        ctx.fillStyle = "green";
+        ctx.fillRect(25, 25, 100, 100);
 
+        ctx.clearRect(45, 45, 60, 60);
+
+        ctx.strokeStyle = "black";
+        ctx.strokeRect(50, 50, 50, 50);
+
+
+        // Dibujar el triángulo
+        ctx.fillStyle = "blue";
+        ctx.beginPath();
+        ctx.moveTo(150, 50);
+        ctx.lineTo(200, 100);
+        ctx.lineTo(100, 100);
+        ctx.closePath();
+        ctx.fill();
+
+
+        // Dibujar Happy Face
+        ctx.beginPath();
+        ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Círculo externo
+        ctx.moveTo(110, 75);
+        ctx.arc(75, 75, 35, 0, Math.PI, false); // Boca (en el sentido de las agujas del reloj)
+        ctx.moveTo(65, 65);
+        ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Ojo izquierdo
+        ctx.moveTo(95, 65);
+        ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Ojo derecho
+        ctx.stroke();*/
+
+        // Triángulo relleno
+        ctx.beginPath();
+        ctx.moveTo(25, 25);
+        ctx.lineTo(105, 25);
+        ctx.lineTo(25, 105);
+        ctx.fill();
+
+        // Triángulo contorneado
+        ctx.beginPath();
+        ctx.moveTo(125, 125);
+        ctx.lineTo(125, 45);
+        ctx.lineTo(45, 125);
+        ctx.closePath();
+        ctx.stroke();
 
     }
-  }
+}
