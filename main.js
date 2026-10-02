@@ -37,6 +37,8 @@ function draw() {
         ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Ojo derecho
         ctx.stroke();*/
 
+        //Lineas
+
         // Triángulo relleno
         ctx.beginPath();
         ctx.moveTo(25, 25);
